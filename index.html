@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+  </head>
+  <body>
+    <h1 id="randomletter"></h1>
+    <button id="generatebutton">CLICKME</button>
+    <script>
+      const alphabet = [['SUSHANTH'],['VIJAY'],['VINOD'],['AKSHAY'],['VIVEK'],['VAMSI']];
+      const colors = ['red', 'green', 'blue', 'yellow', 'orange', 'purple', 'pink', 'brown', 'gray', 'cyan', 'white'];
+
+      document.getElementById('generatebutton').addEventListener('click', () => {
+        const randomLetter = alphabet[Math.floor(Math.random() * alphabet.length)];
+        const randomColor = colors[Math.floor(Math.random() * colors.length)];
+
+        document.getElementById('randomletter').textContent = randomLetter;
+        document.body.style.backgroundColor = randomColor;
+      });
+    </script>
+  </body>
+</html>
